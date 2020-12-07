@@ -6,14 +6,14 @@
 trigger:
 - main
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: default
+ # vmImage: 'ubuntu-latest'
 
 steps:
-- script: |
-    go get github.com/ezekg/git-hound
-    sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
-  displayName: 'install git-hound'
+# - script: |
+#     go get github.com/ezekg/git-hound
+#     sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
+#   displayName: 'install git-hound'
 
 - script: |
     set -euxo pipefail
