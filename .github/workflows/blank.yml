@@ -35,4 +35,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           set -euxo pipefail
-          git-hound sniff
+          ls -a
+          git hound sniff
