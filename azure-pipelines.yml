@@ -15,11 +15,6 @@ steps:
 #     sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
 #   displayName: 'install git-hound'
 
-- pwsh: |
-    # set -euxo pipefail
-    git hound sniff
-  displayName: 'Run git-hound'
-
 - task: Bash@3
   inputs:
     targetType: 'inline'
