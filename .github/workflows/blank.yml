@@ -28,12 +28,14 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: | 
-          go get github.com/ezekg/git-hound
-          sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
+          # go get github.com/ezekg/git-hound
+          # sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
+          brew install git-hound
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
           set -euxo pipefail
           ls -a
-          git hound sniff
+          git-hound sniff
+          
