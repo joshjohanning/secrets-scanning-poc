@@ -17,6 +17,6 @@ steps:
 
 - script: | 
     # Write your commands here
-    echo "git log -p | git-hound sniff"
-    git log -p | git-hound sniff
+    echo "git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --staged | git-hound sniff"
+    git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --staged | git-hound sniff
   displayName: run git-hound
