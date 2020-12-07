@@ -11,9 +11,7 @@ pool:
 
 steps:
 - script: |
-    go get github.com/ezekg/git-hound
-    sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
-    ls -a ~/go/bin
+    brew install git-hound
   displayName: 'install git-hound'
 
 - script: |
