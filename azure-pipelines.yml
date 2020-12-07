@@ -6,21 +6,17 @@
 trigger:
 - main
 
-pool: default
- # vmImage: 'ubuntu-latest'
+pool:
+ vmImage: 'ubuntu-latest'
 
 steps:
-# - script: |
-#     go get github.com/ezekg/git-hound
-#     sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
-#   displayName: 'install git-hound'
+- script: |
+    go get github.com/ezekg/git-hound
+    sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
+  displayName: 'install git-hound'
 
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your commands here
-      set -euxo pipefail
-      git log -p | git hound sniff
-
-    failOnStderr: true
+- script: | 
+    # Write your commands here
+    echo "git log -p | git-hound sniff"
+    git log -p | git-hound sniff
+  displayName: run git-hound
