@@ -7,14 +7,15 @@ trigger:
 - main
 
 pool:
-  vmImage: 'macos-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: |
-    brew install git-hound
+    go get github.com/ezekg/git-hound
+    sudo ln -sf ~/go/bin/git-hound /usr/local/bin/git-hound
   displayName: 'install git-hound'
 
 - script: |
-    ls -a
+    set -euxo pipefail
     git-hound sniff
   displayName: 'Run git-hound'
