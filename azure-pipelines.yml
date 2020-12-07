@@ -17,5 +17,5 @@ steps:
   displayName: 'install git-hound'
 
 - script: |
-    git hound sniff
+    git-hound sniff
   displayName: 'Run git-hound'
