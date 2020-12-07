@@ -17,7 +17,5 @@ steps:
 
 - script: |
     set -euxo pipefail
-    git clone https://github.com/soccerjoshj07/secrets-scanning-poc.git secrets-test
-    cd secrets-test
-    git-hound sniff
+    git hound sniff
   displayName: 'Run git-hound'
