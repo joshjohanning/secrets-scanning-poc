@@ -20,7 +20,7 @@ steps:
     targetType: 'inline'
     script: |
       # Write your commands here
-      
+      set -euxo pipefail
       git log -p | git hound sniff
 
     failOnStderr: true
