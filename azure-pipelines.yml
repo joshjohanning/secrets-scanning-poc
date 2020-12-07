@@ -21,8 +21,6 @@ steps:
     script: |
       # Write your commands here
       
-      ./git-hound
-      ./git-hound sniff
-      # git log -p | git hound sniff
+      git log -p | git hound sniff
 
     failOnStderr: true
