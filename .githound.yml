@@ -11,3 +11,4 @@ fail:
 skip:
   - '\.example$'
   - '\.sample$'
+  - .githound.yml
