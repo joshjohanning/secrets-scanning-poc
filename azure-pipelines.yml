@@ -27,9 +27,6 @@ steps:
   displayName: 'install git-hound'
 
 - script: | 
-    # Write your commands here
-    ls -a
-    echo $(repoName)
     echo "git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --staged | git-hound -config=../git-hound-config/.githound.yml sniff"
     git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --staged | git-hound -config=../git-hound-config/.githound.yml sniff
   displayName: run git-hound
