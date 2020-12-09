@@ -46,10 +46,10 @@ steps:
     echo "$output"
 
     if [[ "$output" =~ "warning:" ]]; then
-      echo "##[warning]git-hound has detected secret warning(s) - see logs for details"
+      echo "##vso[task.logissue type=warning]git-hound has detected secret warning(s) - see logs for details"
     fi
     if [[ "$output" =~ "failure:" ]]; then
-      echo "##[error]git-hound has detected secret failure(s) - see logs for details"
+    echo "##vso[task.logissue type=error]git-hound has detected secret failure(s) - see logs for details"
     fi
 
   displayName: run git-hound
