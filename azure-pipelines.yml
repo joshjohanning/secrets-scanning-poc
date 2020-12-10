@@ -23,3 +23,5 @@ extends:
       jobs: 
       # use job templates as normal for deployment
       - template: secret-scanning/sample-deployment-job.yml@templates
+        parameters:
+          environment: github-secret-scanning-test-gate
