@@ -23,6 +23,4 @@ extends:
       displayName: deploy to dev
       jobs: 
       # use job templates as normal for deployment
-      - template: sample-deployment-job.yml
-        parameters:
-          environment: github-secret-scanning-test-gate
+      - template: secret-scanning/sample-deployment-job.yml@templates
