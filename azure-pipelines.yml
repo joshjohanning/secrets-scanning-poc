@@ -26,10 +26,10 @@ extends:
       # bug?: must use ../
       - template: ../secret-scanning/sample-deployment-job.yml@templates
         parameters:
-          environment: github-secret-scanning-test-gate-dev
+          environment: github-secret-scanning-test-gate-prod
     - stage: prod
       displayName: deploy to prod
       jobs:
       - template: ../secret-scanning/sample-deployment-job.yml@templates
         parameters:
-          environment: github-secret-scanning-test-gate-prod
+          environment: github-secret-scanning-test-gate-dev
