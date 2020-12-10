@@ -4,8 +4,9 @@ trigger:
 resources:
   repositories:
   - repository: templates
-    type: git
-    name: pipeline-templates
+    type: github
+    name: soccerjoshj07/pipeline-templates
+    endpoint: soccerjoshj07
 
 extends:
   template: secret-scanning/secret-scanning-extends.yml@templates
