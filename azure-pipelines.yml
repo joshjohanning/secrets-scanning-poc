@@ -12,8 +12,6 @@ extends:
   template: secret-scanning/secret-scanning-extends.yml@templates
   parameters:
     buildSteps:
-    - script: |
-        echo "run my build..."
     # use steps template for build
     - template: secret-scanning/sample-build-steps.yml@templates
       parameters:
