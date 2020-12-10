@@ -26,21 +26,6 @@ steps:
     echo "##vso[task.setvariable variable=repoName;]$(echo $(Build.Repository.Name) | awk -F'/' '{print $2}')"
   displayName: 'install git-hound'
 
-# - pwsh: | 
-#     $output = git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --staged | git-hound -config="../git-hound-config/.githound.yml" sniff
-#     if($output -contains "warning") {
-#       write-warning "git-hound has detected secret warning(s) - see logs for details"
-#     }
-#     if($output -contains "failure") {
-#       write-error "git-hound has detected secret failure(s) - see logs for details"
-#     }
-
-#     echo $output
-    
-#   displayName: run git-hound
-#   workingDirectory: $(repoName)
-
-
 - script: | 
     output=$(git diff 4b825dc642cb6eb9a060e54bf8d69288fbee4904 --staged | git-hound -config=../git-hound-config/.githound.yml sniff)
     echo "$output"
